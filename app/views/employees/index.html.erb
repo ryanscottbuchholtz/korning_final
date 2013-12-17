@@ -1,0 +1,19 @@
+<h1>Employees</h1>
+<hr />
+
+<table width = "600" cellpadding = "6" cellspacing = "5" bgcolor = "lightyellow">
+  <thead>
+    <td><b><u>Employee Name</u></b></th>
+    <td><b><u>Email Address</u></b></th>
+  </thead>
+
+  <tbody>
+      <% @employees.each do |employee| %>
+    <tr>
+      <td> <%= employee.name %> </td>
+      <td><a href="mailto:<%employee.email_address%>"> <%= employee.email_address %></a></td>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>

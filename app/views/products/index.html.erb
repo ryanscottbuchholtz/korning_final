@@ -1,0 +1,17 @@
+<h1>Products</h1>
+<hr />
+
+<table width = "200" cellpadding = "6" cellspacing = "5" bgcolor = "lightyellow">
+  <thead>
+    <td><b><u>Product Name</u></b></th>
+  </thead>
+
+  <tbody>
+      <% @products.each do |product| %>
+    <tr>
+      <td> <%= product.name %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>

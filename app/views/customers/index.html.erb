@@ -1,0 +1,21 @@
+<h1>Customers</h1>
+<hr />
+
+<table width = "600" cellpadding = "6" cellspacing = "5" bgcolor = "lightyellow">
+  <thead>
+    <td><b><u>Customer</u></b></td>
+    <td><b><u>Account No.</u></b></td>
+    <td><b><u>Customer Website</u></b></td>
+  </thead>
+
+  <tbody>
+      <% @customers.each do |customer| %>
+    <tr>
+      <td> <%= customer.name %> </td>
+      <td> <%= customer.account_no %> </td>
+      <td><a href="http://<%customer.website%>"> <%= customer.website %></a></td>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
