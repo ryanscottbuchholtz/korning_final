@@ -25,11 +25,13 @@
   </thead>
 
   <tbody>
+      <% @employee.sales.all.each do |sale| %>
     <tr>
-      <td> <%= @employee.sales.all %> </td>
-      <td> <%= @employee.sales.all %> </td>
-      <td> <%= @employee.sales.all %> </td>
-      <td> <%= @employee.sales.all %> </td>
+      <td> <%= sale.sale_date %> </td>
+      <td> <%= sale.customer.name %> </td>
+      <td> <%= sale.invoice_no %> </td>
+      <td> <%= sale.sale_amount %> </td>
     </tr>
+      <% end %>
   </tbody>
 </table>
